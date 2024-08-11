@@ -4,28 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d955981c-cee1-44d2-9c0d-99f8dbe38e74" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/java-Secure-Login-and-Logout-System.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/security.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/security.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/security.test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/src/main/java/com/java/security/SecurityApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/src/test/java/com/java/security/SecurityApplicationTests.java" beforeDir="false" />
+    <list default="true" id="d955981c-cee1-44d2-9c0d-99f8dbe38e74" name="Changes" comment="improvement">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +53,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "android.gradle.sync.needed": "true",
     "git-widget-placeholder": "JS-2-project-setup"
   }
@@ -86,6 +67,27 @@
       <option name="presentableId" value="Default" />
       <updated>1723379352972</updated>
     </task>
+    <task id="LOCAL-00001" summary="improvement">
+      <option name="closed" value="true" />
+      <created>1723379713333</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723379713334</updated>
+    </task>
+    <task id="LOCAL-00002" summary="improvement">
+      <option name="closed" value="true" />
+      <created>1723379859959</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1723379859959</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="improvement" />
+    <option name="LAST_COMMIT_MESSAGE" value="improvement" />
   </component>
 </project>
