@@ -33,8 +33,8 @@ jobs:
         run: |
           BRANCH_NAME="${{ github.event.inputs.type }}/${{ github.event.inputs.name }}"
           echo "Creating branch: $BRANCH_NAME"
-          git fetch origin main
-          git checkout main
+          git fetch origin develop
+          git checkout develop
           git pull
           git checkout -b "$BRANCH_NAME"
           git push origin "$BRANCH_NAME"
