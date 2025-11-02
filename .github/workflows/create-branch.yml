@@ -1,0 +1,40 @@
+name: Create Branch
+
+on:
+  workflow_dispatch:   # Enables manual trigger
+    inputs:
+      type:
+        description: "Select branch type"
+        required: true
+        type: choice
+        options:
+          - feature
+          - bugfix
+          - hotfix
+          - release
+          - refactor
+          - chore
+      name:
+        description: "Enter branch name (e.g., add-login-api)"
+        required: true
+
+jobs:
+  create_branch:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write   # Allows creating branches
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Create branch
+        run: |
+          BRANCH_NAME="${{ github.event.inputs.type }}/${{ github.event.inputs.name }}"
+          echo "Creating branch: $BRANCH_NAME"
+          git fetch origin main
+          git checkout main
+          git pull
+          git checkout -b "$BRANCH_NAME"
+          git push origin "$BRANCH_NAME"
