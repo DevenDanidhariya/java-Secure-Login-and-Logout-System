@@ -49,7 +49,7 @@ Thumbs.db
 *.wmv
 
 ### IntelliJ IDEA ###
-.idea/**
+gradle/
 *.iws
 *.iml
 *.ipr
@@ -67,4 +67,3 @@ build/
 
 
 /.gradle/**
-/.idea/**
