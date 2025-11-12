@@ -18,7 +18,8 @@ public class UserMapper {
     user.setLastName(userDTO.lastName());
     user.setEmail(userDTO.email());
     user.setCountryCode(userDTO.countryCode());
-    user.setFullPhoneE164(PhoneNumUtil.formatToE164(userDTO.countryCode(), userDTO.fullPhoneE164()));
+    user.setFullPhoneE164(
+        PhoneNumUtil.formatToE164(userDTO.countryCode(), userDTO.fullPhoneE164()));
     user.setDob(userDTO.dob());
     user.setPassword(userDTO.password());
 
