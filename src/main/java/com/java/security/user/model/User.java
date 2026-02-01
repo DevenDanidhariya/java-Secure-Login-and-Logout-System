@@ -24,7 +24,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "user", indexes = {
+@Table(name = "users", indexes = {
     @Index(name = "idx_email_phone", columnList = "email, fullPhoneE164")})
 public class User extends AbstractModel {
 
@@ -40,7 +40,7 @@ public class User extends AbstractModel {
   @Column(name = "country_code", nullable = false, length = 5)
   private String countryCode;
 
-  @Column(name = "full_phone_e164", nullable = false, length = 18)
+  @Column(name = "full_phoneE164", nullable = false, length = 18)
   private String fullPhoneE164;
 
   @Column(name = "dob", nullable = false)
