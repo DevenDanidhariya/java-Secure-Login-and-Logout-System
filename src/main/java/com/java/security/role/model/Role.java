@@ -13,7 +13,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "role")
+@Table(name = "roles")
 public class Role extends AbstractModel {
 
   @Column(name = "name", unique = true, nullable = false, length = 20)
