@@ -2,6 +2,9 @@ package com.java.security.role.service;
 
 import static com.java.security.exception.ValidatorException.apiError;
 import static com.java.security.exception.ValidatorException.getApiError;
+import static com.java.security.utils.Constants.ERROR_INVALID_S_ID_PROVIDED;
+import static com.java.security.utils.Constants.ERROR_S_NOT_FOUND;
+import static com.java.security.utils.Constants.ROLE;
 
 import com.java.security.exception.ApiError;
 import com.java.security.exception.ValidatorException;
@@ -81,7 +84,7 @@ public class RoleService {
       if (roleDTO.id() == null || roleDTO.id() <= 0) {
         ValidatorException.getListOfApiError(apiErrorList,
             ValidatorException.getApiError(HttpStatus.BAD_REQUEST.value(),
-                "Error : Invalid role id provided"));
+                String.format(ERROR_INVALID_S_ID_PROVIDED, ROLE)));
       }
       if (StringUtils.isBlank(roleDTO.name())) {
         ValidatorException.getListOfApiError(apiErrorList,
@@ -105,7 +108,7 @@ public class RoleService {
       Role role = roleRepository.findByIdAndIsDeleted(roleDTO.id(), false)
           .orElseThrow(() -> new ValidatorException(
               ValidatorException.getApiError(HttpStatus.BAD_REQUEST.value(),
-                  "Error : role not found")));
+                  String.format(ERROR_S_NOT_FOUND, ROLE))));
 
       if (!Objects.equals(role.getId(), roleOptional.get().getId())) {
         ValidatorException.getListOfApiError(apiErrorList,
@@ -129,12 +132,12 @@ public class RoleService {
   public void deleteRole(Long id) {
     if (id == null || id <= 0) {
       apiError(HttpStatus.BAD_REQUEST.value(),
-          "Error : Invalid role id provided");
+          String.format(ERROR_INVALID_S_ID_PROVIDED, ROLE));
     }
     Role role = roleRepository.findByIdAndIsDeleted(id, false)
         .orElseThrow(() -> new ValidatorException(
             ValidatorException.getApiError(HttpStatus.BAD_REQUEST.value(),
-                "Error : role not found")));
+                String.format(ERROR_S_NOT_FOUND, ROLE))));
 
     role.setDeleted(true);
     roleRepository.save(role);
@@ -143,12 +146,12 @@ public class RoleService {
   public RoleDTO getRoleById(Long id) {
     if (id == null || id <= 0) {
       apiError(HttpStatus.BAD_REQUEST.value(),
-          "Error : Invalid role id provided");
+          String.format(ERROR_INVALID_S_ID_PROVIDED, ROLE));
     }
     Role role = roleRepository.findByIdAndIsDeleted(id, false)
         .orElseThrow(() -> new ValidatorException(
             ValidatorException.getApiError(HttpStatus.BAD_REQUEST.value(),
-                "Error : role not found")));
+                String.format(ERROR_S_NOT_FOUND, ROLE))));
 
     return RoleMapper.toDTO(role);
   }

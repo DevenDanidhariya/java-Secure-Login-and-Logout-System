@@ -43,6 +43,9 @@ public class User extends AbstractModel {
   @Column(name = "full_phoneE164", nullable = false, length = 18)
   private String fullPhoneE164;
 
+  @Column(name = "phone_number", nullable = false, length = 18)
+  private String phoneNumber;
+
   @Column(name = "dob", nullable = false)
   private LocalDate dob;
 
@@ -69,11 +72,5 @@ public class User extends AbstractModel {
 
   @Column(name = "password_updated_at", nullable = true)
   private LocalDateTime passwordUpdatedAt;
-
-  @Column(name = "reset_token", nullable = true)
-  private String resetToken;
-
-  @Column(name = "reset_token_expiry", nullable = true)
-  private LocalDateTime resetTokenExpiry;
 
 }

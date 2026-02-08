@@ -3,6 +3,7 @@ package com.java.security.utils;
 import com.google.i18n.phonenumbers.NumberParseException;
 import com.google.i18n.phonenumbers.PhoneNumberUtil;
 import com.google.i18n.phonenumbers.Phonenumber;
+import com.google.i18n.phonenumbers.Phonenumber.PhoneNumber;
 import org.springframework.stereotype.Component;
 
 /**
@@ -33,5 +34,10 @@ public class PhoneNumUtil {
     } catch (NumberParseException e) {
       throw new IllegalArgumentException("Error parsing phone number: " + e.getMessage(), e);
     }
+  }
+
+  public static String getPhoneNumberFromE164(String e164Number) {
+    PhoneNumber number = phoneNumberUtil.getExampleNumber(e164Number);
+    return String.valueOf(number.getNationalNumber());
   }
 }
